@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand " style="color:#FF6000;" href="#"><img src="logo.jpg" alt="A beautiful image" style="width: 50%; height: 50%;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Films</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Offres</a>
+              </li>
+          </ul>
+        <a href="#"><img src="user-icon.png" style="width: 30PX; height: 30PX;"></a>
+        </div>
+      </nav>
+    <picture class="cover">
+     <img src="Group 128.png" alt="A beautiful image">
+    </picture>
+    <div class="container my-container">
+      <div class="row">
+        <div class="col-5">
+          <h1 class="mb-md-1" style ="font-size: 67px">Evil Dead Rise</h1>
+          <div>
+          <div class="hero-film__subtitle mb-2 f-inline f-ai-center f-wrap">
+            <span class="label label--dark " style="background-color: #FF6000;"> Nouveau </span>
+            <span class="label label--dark "> Epouvante - horreur </span>
+            <span class="label label--dark"> Fantastique </span>
+            <span class="label label--dark "> Thriller </span>
+            <span class="label label--dark ">1h37</span>
+            <span class="label label--dark ">+16</span>
+          </div>
+          <p id="paragraph">De Lee Cronin avec Nell Fisher, Tai Wano, Billy Reynolds-McCarthy, Alyssa Sutherland, Gabrielle EcholsDeux sœurs séparées voient leurs retrouvailles être interrompues par l'apparition de démons mangeurs de chair, les poussant dans une bataille primitive pour leur survie....</p>
+           </div>
+           <div id="like-container">
+           <span id="likeCount">0</span><img id="likeButton" onclick="toggleLike()" src="like.png"></div>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/smTK_AeAPHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+      <div class="container second-container">
+        <div class="row second-row">
+            Réserver vos places maintenant!
+        </div>
+        <div class="row third-row">
+            <div class="el first-el">
+              <div style="text-align: center;"> <span> MER. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 18px; padding: 10px;"> 19</span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ;font-size: 17px;"> 09:00</span>
+              <div  style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 03:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">ENG</div></a>
+            </div>
+          </div>
+          <div class="row third-row">
+            <div class="el first-el">
+              
+              <div style="text-align: center;"> <span> JEU. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 17px; padding: 10px;"> 20 </span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 09:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+          </div>
+          <div class="row third-row">
+            <div class="el first-el">
+              
+              <div style="text-align: center;"> <span> VEN. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 17px; padding: 10px;"> 21 </span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 09:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 03:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">ENG</div></a>
+            </div>
+          </div>
+          <div class="row third-row">
+            <div class="el first-el">
+              
+              <div style="text-align: center;"> <span> SAM. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 17px; padding: 10px;"> 22 </span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 09:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row third-row">
+            <div class="el first-el">
+              
+              <div style="text-align: center;"> <span> DIM. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 17px; padding: 10px;"> 23 </span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 09:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 03:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">ENG</div></a>
+            </div>
+          </div>
+          <div class="row third-row">
+            <div class="el first-el">
+              
+              <div style="text-align: center;"> <span> LUN. <br> AVR. </span></div>
+              <div><span style=" font-weight: bold ; font-size: 17px; padding: 10px;"> 24 </span></div>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 09:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 13:00</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VOSTFR</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 15:30</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 20:50</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">3D</div></a>
+            </div>
+            <div class="el second-el">
+              <a role="button" class="screening" href="#">
+              <span style="font-weight: bold ; font-size: 17px;"> 00:05</span>
+              <div style="text-align: right;color :rgba(250, 235, 215, 0.711); font-family: 'Lucida Console', 'Courier New', monospace; margin-right: 3px;">VF</div></a>
+            </div>
+          </div>
+      </div>
+    
+    <footer class="mainfooter" role="contentinfo">
+      <div class="footer-middle">
+        <div class="row">
+          <div class="col-md-3">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>LES NOUVEAUTÉS À L'AFFICHE</h4>
+              <ul class="list-unstyled">
+                <li><a href="#"></a></li>
+                <li><a href="#">Super Mario Bros, le film</a></li>
+                <li><a href="#">Evil Dead Rise</a></li>
+                <li><a href="#">John Wick : Chapitre 4</a></li>
+                <li><a href="#">Tous les films</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>LIENS UTILES</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Offres</a></li>
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Contactez-Nous</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.facebook.com/?stype=lo&jlou=AfdyNq-qIwM_wP6Ai-KI03k6-vXaYiCg6PqX8kGLGVMNHfQNQUyox--YQ4EaCk5oItOPT1eSBUfVv7oEsr-AMYA1U-lYV58cfPzZA35UsUUqFQ&smuh=32090&lh=Ac_4fPV__1Pqp2ojIK8">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.instagram.com/">Twitter</a></li>
+                
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="logo.jpg" alt="" width="250" height="150">
+          </div>			
+        
+        </div>
+          <p class="text-center"> Copyright  ©  2023 - CineC.  All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+
+ 
+</html>
+  
