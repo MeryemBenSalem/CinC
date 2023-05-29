@@ -22,10 +22,10 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Films</a>
+          <a class="nav-link" href="http://localhost/projetweb/Films.php">Films</a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link" href="#">Offres</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
       </ul>
     <a href="#"><img src="user-removebg-preview.png" style="width: 30PX; height: 30PX;"></a>
@@ -121,7 +121,7 @@
             <div class="inner color-white">
               <h3 class="flip-box-header" style="color:black;">Nos Films</h3>
               
-              <button class="flip-box-button" style="color:black;">Learn More</button>
+              <button  class="flip-box-button" style="color:black;">Learn More</button>
             </div>
           </div>
         </div>
@@ -153,35 +153,25 @@
       <footer class="mainfooter" role="contentinfo">
         <div class="footer-middle">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <!--Column1-->
               <div class="footer-pad">
                 <h4>LES NOUVEAUTÉS À L'AFFICHE</h4>
                 <ul class="list-unstyled">
-                  <li><a href="#"></a></li>
-                  <li><a href="#">Super Mario Bros, le film</a></li>
-                  <li><a href="#">Evil Dead Rise</a></li>
-                  <li><a href="#">John Wick : Chapitre 4</a></li>
-                  <li><a href="#">Tous les films</a></li>
+                <?php 
+                  foreach ($films as $film) {
+                  echo"<li><a href='#'>".$film->movieTitle."</a></li>";
+                  }
+                  ?>
                 </ul>
+
               </div>
             </div>
-            <div class="col-md-3">
+            
+            <div class="col-md-4 ">
               <!--Column1-->
               <div class="footer-pad">
-                <h4>LIENS UTILES</h4>
-                <ul class="list-unstyled">
-                  <li><a href="#">Offres</a></li>
-                  <li><a href="#">Centre d'aide</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 ">
-              <!--Column1-->
-              <div class="footer-pad">
-                <h4>Contactez-Nous</h4>
+                <h4 id="contact">Contactez-Nous</h4>
                 <ul class="list-unstyled">
                   <li><a href="https://www.facebook.com/?stype=lo&jlou=AfdyNq-qIwM_wP6Ai-KI03k6-vXaYiCg6PqX8kGLGVMNHfQNQUyox--YQ4EaCk5oItOPT1eSBUfVv7oEsr-AMYA1U-lYV58cfPzZA35UsUUqFQ&smuh=32090&lh=Ac_4fPV__1Pqp2ojIK8">Facebook</a></li>
                   <li><a href="https://www.instagram.com/">Instagram</a></li>
@@ -193,7 +183,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <img src="logo.png" alt="" width="250" height="150">
             </div>			
           
