@@ -9,7 +9,6 @@ try {
     $connection = new PDO("mysql:host=$host;dbname=$database", $username, $password);
     // Set PDO error mode to exception
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Database connection successful";
 } catch(PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
@@ -80,7 +79,7 @@ $connection = null;
 
     <div class="row" style="margin:auto;  padding: 50px;" id="seatMap"></div>
       
-    <form id="bookingForm" action="nouveau_bookings.php" method="POST">
+    <form id="bookingForm" action="nouveau_booking.php" method="POST">
 
     <input type="hidden" name="movieID" value="<?php echo $movieId; ?>">
     <input type="hidden" name="HOUR" value="<?php echo $HOUR; ?>">
@@ -122,16 +121,16 @@ $connection = null;
   <div class="col">
     <label for="nbr" id="nbr">Prix Total:&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <div style="font-size: 20px;">
-      <span class="totalPrice">0</span>
+      <span class="totalPrice">0</span>.0dt
     </div>
   </div>
   <div class="col">
     <label for="metode">Methode de payement:</label>
     <select id="metode" name="metode" required>
-      <option value="metode1">Carte Bancaire</option>
-      <option value="metode2">Paypal</option>
-      <option value="metode3">Paylib</option>
-      <option value="metode3">Carte e-dinar</option>
+      <option value="Carte Bancaire">Carte Bancaire</option>
+      <option value="Paypal">Paypal</option>
+      <option value="Paylib">Paylib</option>
+      <option value="Carte e-dinar">Carte e-dinar</option>
     </select>
   </div>
 

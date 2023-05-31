@@ -26,10 +26,10 @@ include 'nouveaux_films.php';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/projetweb/home.php">Home</a>
+        <a class="nav-link" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/projetweb/Films.php">Films</a>
+          <a class="nav-link" href="Films.php">Films</a>
         </li>
         <li class="nav-item ">
             <a class="nav-link" href="#contact">Contact</a>

@@ -251,7 +251,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
           </div>
           <div class="col-md-3 ">
             <!--Column1-->
-            <div class="footer-pad">
+            <div id="contact" class="footer-pad">
               <h4>Contactez-Nous</h4>
               <ul class="list-unstyled">
                 <li><a href="https://www.facebook.com/?stype=lo&jlou=AfdyNq-qIwM_wP6Ai-KI03k6-vXaYiCg6PqX8kGLGVMNHfQNQUyox--YQ4EaCk5oItOPT1eSBUfVv7oEsr-AMYA1U-lYV58cfPzZA35UsUUqFQ&smuh=32090&lh=Ac_4fPV__1Pqp2ojIK8">Facebook</a></li>

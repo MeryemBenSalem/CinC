@@ -21,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item">
-      <a class="nav-link" href="http://localhost/projetweb/home.php">Home</a>
+      <a class="nav-link" href="home.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost/projetweb/Films.php">Films</a>
@@ -47,7 +47,7 @@
       <div class="container" >
         <h1 class="col-md-9 " style="color:#FF6000; font-size: 50px;"> Avant-premières et préventes </h1>
           
-          <a href="#" class="btn btn-secondary my-2" style="color: white;font-size: 25px;">Nouveautés</a>
+          <a href="Films.php" class="btn btn-secondary my-2" style="color: white;font-size: 25px;">Voir Nos Films </a>
       </div>
     </section>
   
@@ -85,7 +85,7 @@
         cherchez un endroit pour découvrir les derniers films, lire des critiques, obtenir des informations sur les horaires des séances ou simplement plonger dans 
         l'univers magique du cinéma ? Ne cherchez plus, vous êtes au bon endroit !</span>
         <br><br><br>
-        <div class="row"> <a href="#" class="btn  my-2" style="background-color: #090a0b;color: #FF6000;font-size: 25px;">Savoir Plus</a>
+        <div class="row"> <a href="Films.php" class="btn  my-2" style="background-color: #090a0b;color: #FF6000;font-size: 25px;">Savoir Plus</a>
         </div>
 
         </div>
@@ -106,7 +106,7 @@
             <div class="inner color-white">
               <h3 class="flip-box-header">Fans pick </h3>
               <p>N'attendez plus rien.</p>
-              <button class="flip-box-button">Book now </button>
+              <a href="Films.php" class="btn btn- my-2" style="color: white;font-size: 25px;">Book Now </a>
             </div>
           </div>
         </div>
@@ -123,8 +123,7 @@
           <div class="flip-box-back text-center" style="background-image: url('https://lepetitjournal.com/sites/default/files/styles/main_article/public/2022-04/Cinema_Avril.jpg?itok=pcFJO6Pn');">
             <div class="inner color-white">
               <h3 class="flip-box-header" style="color:black;">Nos Films</h3>
-              
-              <button  class="flip-box-button" style="color:black;">Learn More</button>
+              <a href="Films.php" class="btn btn- my-2" style="color: orange ;font-size: 25px;">Our Movies </a>
             </div>
           </div>
         </div>
@@ -183,7 +182,7 @@
           </div>
           <div class="col-md-3 ">
             <!--Column1-->
-            <div class="footer-pad">
+            <div id="contact" class="footer-pad">
               <h4>Contactez-Nous</h4>
               <ul class="list-unstyled">
                 <li><a href="https://www.facebook.com/?stype=lo&jlou=AfdyNq-qIwM_wP6Ai-KI03k6-vXaYiCg6PqX8kGLGVMNHfQNQUyox--YQ4EaCk5oItOPT1eSBUfVv7oEsr-AMYA1U-lYV58cfPzZA35UsUUqFQ&smuh=32090&lh=Ac_4fPV__1Pqp2ojIK8">Facebook</a></li>
