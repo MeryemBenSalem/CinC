@@ -15,6 +15,8 @@ if(isset($_POST['update'])){
    $pid = $_POST['pid'];
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
+   $image = $_POST['image'];
+   $image = filter_var($image, FILTER_SANITIZE_STRING);
    $genre = $_POST['genre'];
    $genre = filter_var($genre, FILTER_SANITIZE_STRING);
    $duration = $_POST['duration'];
@@ -25,12 +27,12 @@ if(isset($_POST['update'])){
    $director = filter_var($director, FILTER_SANITIZE_STRING);
    $actors = $_POST['actors'];
    $actors = filter_var($actors, FILTER_SANITIZE_STRING);
-   $mainhall = $_POST['mainhall'];
-   $mainhall = filter_var($mainhall, FILTER_SANITIZE_STRING);
-   $viphall = $_POST['viphall'];
-   $viphall = filter_var($viphall, FILTER_SANITIZE_STRING);
-   $privatehall = $_POST['privatehall'];
-   $privatehall = filter_var($privatehall, FILTER_SANITIZE_STRING);
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
+   $trailer = $_POST['trailer'];
+   $trailer = filter_var($trailer, FILTER_SANITIZE_STRING);
+   $imageP = $_POST['imageP'];
+   $imageP = filter_var($imageP, FILTER_SANITIZE_STRING);
 
 
 
@@ -38,30 +40,11 @@ if(isset($_POST['update'])){
    
 
    $conn = ConnexionBD::getInstance();
-   $update_film = $conn->prepare("UPDATE `movietable` SET `movieTitle`=?,`movieGenre`=?,`movieDuration`=?,`movieRelDate`=?,`movieDirector`=?,`movieActors`=?,`mainhall`=?,`viphall`=?,`privatehall`=? WHERE movieID=?");
-   $update_film->execute([$name, $genre, $duration,$release,$director,$actors , $mainhall , $viphall, $privatehall, $pid]);
+   $update_film = $conn->prepare("UPDATE `movietable` SET `movieImg`=?,`movieGenre`=?,`movieDuration`=?,`movieRelDate`=?,`movieDirector`=?,`movieActors`=?,`description`=?,`trailer`=?,`movieImgPAYSAGE`=? WHERE movieID=?");
+   $update_film->execute([$name,$image, $genre, $duration,$release,$director,$actors , $description , $trailer, $imageP, $pid]);
 
    $message[] = 'Film updated successfully!';
 
-   $old_image_01 = $_POST['old_image_01'];
-   $image_01 = $_FILES['image_01']['name'];
-   $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
-   $image_size_01 = $_FILES['image_01']['size'];
-   $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
-   $image_folder_01 = 'uploaded_img/'.$image_01;
-
-   if(!empty($image_01)){
-      if($image_size_01 > 2000000){
-         $message[] = 'image size is too large!';
-      }else{
-         $conn = ConnexionBD::getInstance();
-         $update_image_01 = $conn->prepare("UPDATE `movietable` SET movieImg = ? WHERE movieID = ?");
-         $update_image_01->execute([$image_01, $pid]);
-         move_uploaded_file($image_tmp_name_01, $image_folder_01);
-         unlink('uploaded_img/'.$old_image_01);
-         $message[] = 'image  updated successfully!';
-      }
-   }
 
  
 
@@ -111,6 +94,8 @@ if(isset($_POST['update'])){
       </div>
       <span>update name</span>
       <input type="text" name="name" required class="box" maxlength="100" placeholder="enter film name" value="<?= $fetch_films['movieTitle']; ?>">
+      <span>update image</span>
+      <input type="text" name="image" required class="box" maxlength="100" placeholder="enter film image src" value="<?= $fetch_films['movieImg']; ?>">
       <span>update genre</span>
       <input type="text" name="genre" required class="box" maxlength="100" placeholder="enter film genre" value="<?= $fetch_films['movieGenre']; ?>">
       <span>update duration</span>
@@ -121,14 +106,12 @@ if(isset($_POST['update'])){
       <input type="text" name="director" required class="box" maxlength="100" placeholder="enter film director" value="<?= $fetch_films['movieDirector']; ?>">
       <span>update actors</span>
       <textarea name="actors" class="box" placeholder="enter film actors" required cols="30" rows="10"><?= $fetch_films['movieActors']; ?></textarea>
-      <span>update image </span>
-      <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
-      <span>update mainhall</span>
-      <input type="number" name="mainhall" required class="box" min="0" max="9999999999" placeholder="enter film mainhall" onkeypress="if(this.value.length == 10) return false;" value="<?= $fetch_films['mainhall']; ?>">
-      <span>update viphall</span>
-      <input type="number" name="viphall" required class="box" min="0" max="9999999999" placeholder="enter film viphall" onkeypress="if(this.value.length == 10) return false;" value="<?= $fetch_films['viphall']; ?>">
-      <span>update privatehall</span>
-      <input type="number" name="privatehall" required class="box" min="0" max="9999999999" placeholder="enter film privatehall" onkeypress="if(this.value.length == 10) return false;" value="<?= $fetch_films['privatehall']; ?>">
+      <span>update description</span>
+      <input type="text" name="description" required class="box" maxlength="100" placeholder="enter film description" value="<?= $fetch_films['description']; ?>">
+      <span>update trailer</span>
+      <input type="text" name="trailer" required class="box" maxlength="100" placeholder="enter film trailer" value="<?= $fetch_films['trailer']; ?>">
+      <span>update image paysage</span>
+      <input type="text" name="imageP" required class="box" maxlength="100" placeholder="enter film image format paysage" value="<?= $fetch_films['movieImgPAYSAGE']; ?>">
       <div class="flex-btn">
          <input type="submit" name="update" class="btn" value="Update">
          <a href="films_admin.php" class="option-btn">Go back</a>

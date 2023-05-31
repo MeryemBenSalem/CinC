@@ -561,7 +561,3 @@ footer a:hover {
   padding-top: 2em;
   color: white;
 }
-#nvb{
-  background: transparent;
-  backdrop-filter: blur(7px);
-}

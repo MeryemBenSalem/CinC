@@ -2,10 +2,14 @@
 
 include 'connexionDB.php';
 
+
 session_start();
+ 
+
 
 if(isset($_POST['submit'])){
-
+ 
+   setcookie ("cinec", time() + (86400 * 30)  );
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $pass = sha1($_POST['pass']);
@@ -18,6 +22,7 @@ if(isset($_POST['submit'])){
    $row = $select_admin->fetch(PDO::FETCH_ASSOC);
 
    if($select_admin->rowCount() > 0){
+      
       $_SESSION['id'] = $row['id'];
 
       header('location:dashboard.php');
@@ -59,8 +64,8 @@ if(isset($_POST['submit'])){
 <section class="form-container">
 
    <form action="" method="post">
-      <h3>login now</h3>
-      <p>default username = <span>Meryem</span> & password = <span>1234</span></p>
+      <h3>login Now</h3>
+      
       <input type="text" name="name" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="enter your password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="login now" class="btn"  name="submit">

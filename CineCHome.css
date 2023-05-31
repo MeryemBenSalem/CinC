@@ -1,12 +1,14 @@
 * {
+  
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
+    
   }
   body{
-    background-color: #090a0b;
+    background-color: #090a0b !important;
   }
  .footer{
   width: 100%;
@@ -271,14 +273,14 @@
   
   @media screen and (min-width:1380px) {
     .box-container {
-      flex-direction: row
+      flex-direction: row;
     }
   }
   
   .box-item {
     position: relative;
     -webkit-backface-visibility: hidden;
-    width: 415px;
+    width: 100%;
     margin-bottom: 35px;
     max-width: 100%;
   }
@@ -412,11 +414,4 @@ footer a:hover {
   padding-top: 2em;
   color: white;
 }
-#nvb{
-  background: transparent;
-  backdrop-filter: blur(7px);
-}
-
-
-
 

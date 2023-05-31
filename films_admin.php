@@ -15,11 +15,8 @@ if(isset($_POST['add_film'])){
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    
-   $image_01 = $_FILES['image_01']['name'];
-   $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
-   $image_size_01 = $_FILES['image_01']['size'];
-   $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
-   $image_folder_01 = 'uploaded_img/'.$image_01;
+   $image = $_POST['image'];
+   $image = filter_var($image, FILTER_SANITIZE_STRING);
    $genre = $_POST['genre'];
    $genre = filter_var($genre, FILTER_SANITIZE_STRING);
    $duration = $_POST['duration'];
@@ -30,12 +27,12 @@ if(isset($_POST['add_film'])){
    $director = filter_var($director, FILTER_SANITIZE_STRING);
    $actors = $_POST['actors'];
    $actors = filter_var($actors, FILTER_SANITIZE_STRING);
-   $mainhall = $_POST['mainhall'];
-   $mainhall = filter_var($mainhall, FILTER_SANITIZE_STRING);
-   $viphall = $_POST['viphall'];
-   $viphall = filter_var($viphall, FILTER_SANITIZE_STRING);
-   $privatehall = $_POST['privatehall'];
-   $privatehall = filter_var($privatehall, FILTER_SANITIZE_STRING);
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
+   $trailer = $_POST['trailer'];
+   $trailer = filter_var($trailer, FILTER_SANITIZE_STRING);
+   $imageP = $_POST['imageP'];
+   $imageP = filter_var($imageP, FILTER_SANITIZE_STRING);
    
    
 
@@ -47,17 +44,13 @@ if(isset($_POST['add_film'])){
       $message[] = 'Film name already exist!';
    }else{
       $conn = ConnexionBD::getInstance();
-      $insert_films = $conn->prepare("INSERT INTO `movietable`( `movieImg`, `movieTitle`, `movieGenre`, `movieDuration`, `movieRelDate`, `movieDirector`, `movieActors`, `mainhall`, `viphall`, `privatehall`) VALUES (?,?,?,?,?,?,?,?,?,?) ");
-      $insert_films->execute([$image_01,$name, $genre,$duration,$release,$director,$actors ,$mainhall,$viphall,$privatehall]);
+      $insert_films = $conn->prepare("INSERT INTO `movietable`( `movieImg`, `movieTitle`, `movieGenre`, `movieDuration`, `movieRelDate`, `movieDirector`, `movieActors`, `description`, `trailer`, `movieImgPAYSAGE`) VALUES (?,?,?,?,?,?,?,?,?,?) ");
+      $insert_films->execute([$image,$name, $genre,$duration,$release,$director,$actors ,$description,$trailer,$imageP]);
 
       if($insert_films){
-         if($image_size_01 > 2000000 ){
-            $message[] = 'image size is too large!';
-         }else{
-            move_uploaded_file($image_tmp_name_01, $image_folder_01);
           
             $message[] = 'New Film added!';
-         }
+         
 
       }
 
@@ -113,7 +106,7 @@ if(isset($_GET['delete'])){
        
         <div class="inputBox">
             <span>Image  (required)</span>
-            <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
+            <input type="text" class="box" required maxlength="100" placeholder="enter film image" name="image">
         </div>
         <div class="inputBox">
             <span>Film Genre  (required)</span>
@@ -137,16 +130,16 @@ if(isset($_GET['delete'])){
             <input type="text" name="actors" placeholder="enter film actors" class="box" required>
         </div>
         <div class="inputBox">
-            <span>Film mainhall  (required)</span>
-            <input type="number" name="mainhall" placeholder="enter film mainhall" class="box" required>
+            <span>Film description  (required)</span>
+            <input type="text" name="description" placeholder="enter film description" class="box" required>
         </div>
         <div class="inputBox">
-            <span>Film viphall  (required)</span>
-            <input type="number" name="viphall" placeholder="enter film viphall" class="box" required>
+            <span>Film trailer (required)</span>
+            <input type="text" name="trailer" placeholder="enter film trailer" class="box" required>
         </div>
         <div class="inputBox">
-            <span>Film privatehall  (required)</span>
-            <input type="number" name="privatehall" placeholder="enter film privatehall" class="box" required>
+            <span>Film image Paysage (required)</span>
+            <input type="text" name="imageP" placeholder="enter film image Paysage" class="box" required>
         </div>
 
    
@@ -182,9 +175,7 @@ if(isset($_GET['delete'])){
       <div class="release"> Release Date : <span><?= $fetch_films['movieRelDate']; ?></span></div><br>
       <div class="director">Director : <span><?= $fetch_films['movieDirector']; ?></span></div><br>
       <div class="actors">Cast: <span><?= $fetch_films['movieActors']; ?></span></div><br>
-      <div class="mainhall">MainHall: <span><?= $fetch_films['mainhall']; ?></span></div><br>
-      <div class="viphall">VIPHall : <span><?= $fetch_films['viphall']; ?></span></div><br>
-      <div class="privatehall">PrivateHall : <span><?= $fetch_films['privatehall']; ?></span></div><br>
+      <div class="description">Descripton: <span><?= $fetch_films['description']; ?></span></div><br>
       <div class="flex-btn">
          <a href="update_film.php?update=<?= $fetch_films['movieID']; ?>" class="option-btn">Update</a>
          <a href="films_admin.php?delete=<?= $fetch_films['movieID']; ?>" class="delete-btn" onclick="return confirm('delete this Film?');">Delete</a>
