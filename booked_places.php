@@ -30,7 +30,6 @@ if(isset($_GET['delete'])){
    <title>Booking Orders</title>
    <link rel="shortcut icon" href="logo.png"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
    <link rel="stylesheet" href="admin_style.css">
 
 </head>
@@ -53,17 +52,16 @@ if(isset($_GET['delete'])){
    ?>
    <div class="box">
       
-      <p> Booking Name : <span><?= $fetch_orders['bookingFName']; ?></span> </p>
-      <p> Booking LastName : <span><?= $fetch_orders['bookingLName']; ?></span> </p>
-      <p> Booking Phone Number : <span><?= $fetch_orders['bookingPNumber']; ?></span> </p>
-      <p> Booking Email : <span><?= $fetch_orders['bookingEmail']; ?></span> </p>
+      <p> First Name : <span><?= $fetch_orders['bookingFName']; ?></span> </p>
+      <p> Last Name : <span><?= $fetch_orders['bookingLName']; ?></span> </p>
+      <p> Email : <span><?= $fetch_orders['bookingEmail']; ?></span> </p>
       <p> Booking Date: <span><?= $fetch_orders['bookingDate']; ?></span> </p>
       <p> Booking time : <span><?= $fetch_orders['bookingTime']; ?></span> </p>
       <p> Film ID : <span><?=  $fetch_orders['movieID']; ?></span> </p>
       <p> Date Time : <span><?= $fetch_orders['DATE-TIME']; ?></span> </p>
-      <p> Booking Theater : <span><?= $fetch_orders['bookingTheatre']; ?></span> </p>
-      <p>  Price : <span>$<?= $fetch_orders['amount']; ?>/-</span> </p>
-      <p> Payment Method : <span><?= $fetch_orders['ORDERID']; ?></span> </p>
+      <p> Booking Seat : <span><?= $fetch_orders['bookingSeat']; ?></span> </p>
+      <p>  Price : <span>$<?= $fetch_orders['amount']; ?></span> </p>
+      <p> Payment Method : <span><?= $fetch_orders['bookingType']; ?></span> </p>
       <form action="" method="post">
       <div class="flex-btn">
          
