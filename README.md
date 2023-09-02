@@ -9,9 +9,8 @@ Back-end coded with PHP and front-end coded with Bootstrap, CSS, HTML, and Javas
 ## Tools and Versions : 
 
  1.  WAMPSERVER  3.3.0 64 bit 
- 2.	PhpMyAdmin : 5.2.0 
- 3.	PHP : 7.4.33
- 4.	MySQL : 8.0.31
+ 2.	PHP : 7.4.33
+ 3.	MySQL : 8.0.31
 ## Installation : 
 
 1)	Open PhpMyAdmin .
