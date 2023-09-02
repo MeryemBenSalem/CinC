@@ -21,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item">
-      <a class="nav-link" href="home.php">Home</a>
+      <a class="nav-link" href="http://localhost/projetweb/home.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost/projetweb/Films.php">Films</a>
@@ -38,7 +38,7 @@
 
 
   <div class="hero">
-    <h2  style="font-size: 85px;"><br><br>Coming Soon <br> DUNE </h2>
+  <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <h2  style="font-size: 85px;">DUNE</h2>
     <p><a class="btn btn-secondary" href='Movie.php?id=5' role="button">Réservez Maintenant &raquo;</a></p>
   </div>
   <main role="main" style="background-color: #090a0b;">
@@ -70,8 +70,8 @@
        ?>
        <div>
     </section>
-    <div class="container-fluid bg-light" >
-      <div class="row" style="background-color:#111314;">
+    <div class="container-fluid bg-light" style="padding:0;">
+      <div class="row" style="background-color:#090a0b;">
         <div class="col-md-6" style="margin-top: 5%; margin-left: 5%; margin-bottom: 5%; margin-right: 5%;">
           
          <iframe width="720" height="400" src="https://www.youtube.com/embed/smTK_AeAPHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

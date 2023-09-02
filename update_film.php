@@ -40,8 +40,8 @@ if(isset($_POST['update'])){
    
 
    $conn = ConnexionBD::getInstance();
-   $update_film = $conn->prepare("UPDATE `movietable` SET `movieImg`=?,`movieGenre`=?,`movieDuration`=?,`movieRelDate`=?,`movieDirector`=?,`movieActors`=?,`description`=?,`trailer`=?,`movieImgPAYSAGE`=? WHERE movieID=?");
-   $update_film->execute([$name,$image, $genre, $duration,$release,$director,$actors , $description , $trailer, $imageP, $pid]);
+   $update_film = $conn->prepare("UPDATE `movietable` SET `movieImg`=?,movieTitle=? ,`movieGenre`=?,`movieDuration`=?,`movieRelDate`=?,`movieDirector`=?,`movieActors`=?,`description`=?,`trailer`=?,`movieImgPAYSAGE`=? WHERE movieID=?");
+   $update_film->execute([$image,$name, $genre, $duration,$release,$director,$actors , $description , $trailer, $imageP, $pid]);
 
    $message[] = 'Film updated successfully!';
 
