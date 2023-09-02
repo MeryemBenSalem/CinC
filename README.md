@@ -22,9 +22,7 @@ Admin Login Informations :
 2)	Password : 123
 
 
-## DataBase Diagram :
 
-![Alt Text](database.png)
 
 
 
